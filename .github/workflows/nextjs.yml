@@ -30,7 +30,7 @@ jobs:
       run: npm run build  # Runs the build command to create the production-ready app
 
     - name: Upload production build (optional)
-      uses: actions/upload-artifact@v2  # Optionally upload the build artifact (for deployment or later use)
+      uses: actions/upload-artifact@v3  # Optionally upload the build artifact (for deployment or later use)
       with:
         name: react-build
         path: build  # Path to the build directory in the React app
