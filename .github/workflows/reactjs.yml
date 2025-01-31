@@ -18,7 +18,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2  # Sets up Node.js
       with:
-        node-version: '14'  # Use Node.js version 14 (adjust according to your React version)
+        node-version: '14'  # Use Node.js version 14 
 
     - name: Install dependencies
       run: npm install  # Installs the dependencies defined in package.json
