@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2  # Checks out the code in the repository
+      uses: actions/checkout@v4  # Checks out the code in the repository
 
     - name: Set up Node.js
       uses: actions/setup-node@v2  # Sets up Node.js
@@ -30,7 +30,7 @@ jobs:
       run: npm run build  # Runs the build command to create the production-ready app
 
     - name: Upload production build (optional)
-      uses: actions/upload-artifact@v3  # Optionally upload the build artifact (for deployment or later use)
+      uses: actions/upload-artifact@v4  # Optionally upload the build artifact (for deployment or later use)
       with:
         name: react-build
         path: build  # Path to the build directory in the React app
