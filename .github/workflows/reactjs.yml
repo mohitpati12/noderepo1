@@ -33,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v4  # Optionally upload the build artifact
       with:
         name: react-build
-        path: D:\git_artifact  # Path to the build directory in the React app
+        path: build  # Path to the build directory in the React app
 
