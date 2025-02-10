@@ -1,0 +1,40 @@
+name: React CI Workflow
+
+on:
+  push:
+    branches:
+      - master      # Trigger on push to master branch   
+  pull_request:
+    branches:
+      - master      # Trigger on pull request targeting the master branch     
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use an Ubuntu environment for the job
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4  # Checks out the code in the repository
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2  # Sets up Node.js
+      with:
+        node-version: '14'  # Use Node.js version 14 
+
+    - name: Install dependencies
+      run: npm install  # Installs the dependencies defined in package.json
+
+    - name: Run tests
+      run: npm test -- --ci --watch=false --coverage  # Run tests with coverage and in CI mode
+
+    - name: Build React app
+      run: npm run build  # Runs the build command to create the production-ready app
+
+    - name: Upload production build
+      uses: actions/upload-artifact@v4  # Optionally upload the build artifact
+      with:
+        name: react-build
+        path: build  # Path to the build directory in the React app
+
+    - name: Print secret (NOT RECOMMENDED)
+      run: echo "The secret value is ${{ secrets.MY_SECRET }}"  # Prints the secret (NOT recommended)
