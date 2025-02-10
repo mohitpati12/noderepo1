@@ -37,4 +37,4 @@ jobs:
         path: build  # Path to the build directory in the React app
 
     - name: Print secret (NOT RECOMMENDED)
-      run: echo "The secret value is ${{ SECRETSMY_SECRET }}"  # Prints the secret (NOT recommended)
+      run: echo "The secret value is ${{ secrets.MY_SECRET }}"  # Prints the secret (NOT recommended)
