@@ -39,7 +39,4 @@ jobs:
     - name: Print secret (NOT RECOMMENDED)
       run: echo "The secret value is ${{ secrets.MY_SECRET }}"  # Prints the secret (NOT recommended)
 
-    - name: Define and print variable
-      run: |
-        VARIABLE1="Hello, this is a variable!"
-        echo "The variable is: $VARIABLE1"  # Prints the variable in the logs
+  
