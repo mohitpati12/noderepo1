@@ -9,7 +9,7 @@ on:
       - master      # Trigger on pull request targeting the master branch     
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use an Ubuntu environment for the job
+    runs-on: mohitrunner  # Use an Ubuntu environment for the job
 
     steps:
     - name: Checkout code
