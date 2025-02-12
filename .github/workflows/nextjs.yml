@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted  # Use an Ubuntu environment for the job
+    runs-on: mohitrunner  # Use an Ubuntu environment for the job
 
     steps:
     - name: Checkout code
